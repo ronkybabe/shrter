@@ -1,0 +1,4 @@
+Flask==2.1.1
+qrcode[pil]==7.2
+pyshorteners==1.0.0
+
