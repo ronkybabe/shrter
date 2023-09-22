@@ -46,11 +46,3 @@ h3 {
     border: 1px solid;
     box-shadow: 0 2px 4px;
 }
-
-    .reserved {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        display: flex;
-        min-height: 50px;
-    }
