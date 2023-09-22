@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="style.css">
     <title>URL Shortener and QR Code Generator</title>
 </head>
 <body>
     <h1>URL Shortener and QR Code Generator</h1>
-
+    <h3>You can shorten your url just with this lovely application</h3>
+<section class="form">
     <h2>Shorten a URL</h2>
     <form method="POST" action="/shorten">
-        <input type="text" name="long_url" placeholder="Enter a long URL">
-        <button type="submit">Shorten</button>
+        <input type="text" class="enter" name="long_url" placeholder="Enter a long URL">
+        <button type="submit" class="shorten-button">Shorten</button>
     </form>
     {% if short_url %}
-    <p>Shortened URL: <a href="{{ short_url }}">{{ short_url }}</a></p>
+    <p class="my-class">Shortened URL: <a href="{{ short_url }}">{{ short_url }}</a></p>
     {% endif %}
 
     <h2>Generate QR Code</h2>
     <form method="POST" action="/generate_qrcode">
-        <input type="text" name="data" placeholder="Enter data for QR code">
-        <button type="submit">Generate QR Code</button>
+        <input type="text" class="code" name="data" placeholder="Enter data for QR code">
+        <br>
+        <button type="submit" class="generate">Generate QR Code</button>
     </form>
     {% if qr_code %}
     <img src="{{ qr_code }}" alt="QR Code">
     {% endif %}
+</section>
+    <h3>Features</h3>
+<section class="section">
+    <div class="container"><b>URL Shortening</b><p>URL Shortening allows users to shorten URLs by pasting a long URL into the platform and a shorter URL gets automatically generated. The shortened URL is designed to be as short as possible, making it easy to share on social media or through other channels.</p>
+    </div>
+    
+    <div class="container"><b>Custom URLs</b><p>It also allows users to customize their shortened URLs. Users can choose their own custom path name and customize the URL to reflect their brand or content. This feature is particularly useful for individuals or small businesses who want to create branded links for their company, event or organnizations.</p>
+    </div>
+
+    <div class="container"><b>Analytics</b>
+
+    </div>
+</section>
 </body>
 </html>
-
